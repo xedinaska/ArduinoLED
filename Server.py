@@ -49,6 +49,8 @@ class myHandler(BaseHTTPRequestHandler):
                 environ={'REQUEST_METHOD': 'POST', 'CONTENT_TYPE': self.headers['Content-Type']}
             )
 
+            print(form["color"].value)
+
             arduinoController = ArduinoLEDController.ArduinoLEDController()
             arduinoController.handle(form["color"].value)
 
