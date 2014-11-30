@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys
-from ArduinoLEDController import ArduinoLEDController
+from LEDController import ArduinoLEDController
 
 if sys.argv.__len__() > 1:
-    arduinoController = ArduinoLEDController()
+    arduinoController = ArduinoLEDController.ArduinoLEDController()
     arduinoController.handle(sys.argv[1])

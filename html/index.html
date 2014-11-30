@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+            $(document).on('change', 'input[name=color]', function() {
+                var $self = $(this);
+
+                var color = $self.val();
+
+                $.ajax({
+                    url: '/send',
+                    type: 'POST',
+                    data: 'color=' + color
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="radio" name="color" value="red">Red
+        <br>
+        <input type="radio" name="color" value="green">Green
+        <br>
+        <input type="radio" name="color" value="blue">Blue
+        <br><br>
+        <input type="radio" name="color" value="off">Off
+        <br><br>
+    </body>
+</html>
