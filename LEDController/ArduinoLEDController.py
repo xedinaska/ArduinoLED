@@ -12,7 +12,7 @@ class ArduinoLEDController:
         time.sleep(2)
 
     def handle(self, param):
-        colors = {'red': '1', 'green': '2', 'blue': '3', 'yellow': '4', 'pink': '5'}
+        colors = {'red': '1', 'green': '2', 'blue': '3', 'yellow': '4', 'pink': '5', 'violet': '6'}
 
         if param not in colors:
             color = '0'
